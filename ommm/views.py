@@ -15,7 +15,7 @@ from rest_framework.schemas import SchemaGenerator
 from rest_framework_swagger.renderers import OpenAPIRenderer, SwaggerUIRenderer
 
 
-class SignIn(APIView):
+class SignUp(APIView):
 
     def post(self, request):
         serializer = ValidatedUserSerializer(data=request.data)

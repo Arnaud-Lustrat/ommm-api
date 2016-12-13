@@ -6,8 +6,8 @@ app_name = 'ommm'
 urlpatterns = [
 
     # Authentification
-    url(r'^signin/', views.SignIn.as_view()),
-    url(r'^login/', obtain_jwt_token),
+    url(r'^signup/', views.SignUp.as_view()),
+    url(r'^signin/', obtain_jwt_token),
     url(r'^restricted/', views.Home.as_view()),
 
     # Types
