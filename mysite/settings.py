@@ -37,6 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'rest_framework.authtoken',
+    'rest_framework_jwt',
+    'rest_framework_swagger',
+    'ommm',
 ]
 
 MIDDLEWARE = [
@@ -125,3 +130,12 @@ MEDIA_URL = '/media/'
 
 STATIC_ROOT = './static'
 MEDIA_ROOT = './media'
+
+
+# Rest configuration
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+    )
+}
