@@ -1,0 +1,8 @@
+Django
+psycopg2
+uwsgi
+djangorestframework
+markdown
+django-filter
+django-rest-swagger
+djangorestframework-jwt
