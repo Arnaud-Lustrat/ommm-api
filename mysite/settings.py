@@ -25,7 +25,7 @@ SECRET_KEY = 'o)s0(91($h(h@xd3%62cf_ri-zuowzgu6qkuqkjr*tpj6^zgf_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['10.0.75.1']
+ALLOWED_HOSTS = ['10.0.75.1', 'dry-headland-65759.herokuapp.com']
 
 
 # Application definition
