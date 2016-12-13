@@ -18,10 +18,8 @@ class SubscriptionsList(mixins.ListModelMixin, mixins.CreateModelMixin, generics
         return self.create(request, *args, **kwargs)
 
 
-class SubscriptionsDetail(mixins.RetrieveModelMixin,
-                    mixins.UpdateModelMixin,
-                    mixins.DestroyModelMixin,
-                    generics.GenericAPIView):
+class SubscriptionsDetail(mixins.RetrieveModelMixin, mixins.UpdateModelMixin,
+                    mixins.DestroyModelMixin, generics.GenericAPIView):
     # permission_classes = (IsAuthenticated,)
     queryset = Subscriptions.objects.all()
     serializer_class = SubscriptionsSerializer

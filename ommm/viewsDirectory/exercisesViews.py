@@ -7,7 +7,7 @@ from ommm.serializers import ExercisesSerializer
 
 
 class ExercisesList(mixins.ListModelMixin, mixins.CreateModelMixin, generics.GenericAPIView):
-    #permission_classes = (IsAuthenticated,)
+    # permission_classes = (IsAuthenticated,)
     queryset = Exercises.objects.all()
     serializer_class = ExercisesSerializer
 
@@ -18,10 +18,8 @@ class ExercisesList(mixins.ListModelMixin, mixins.CreateModelMixin, generics.Gen
         return self.create(request, *args, **kwargs)
 
 
-class ExercisesDetail(mixins.RetrieveModelMixin,
-                    mixins.UpdateModelMixin,
-                    mixins.DestroyModelMixin,
-                    generics.GenericAPIView):
+class ExercisesDetail(mixins.RetrieveModelMixin, mixins.UpdateModelMixin,
+                    mixins.DestroyModelMixin, generics.GenericAPIView):
     # permission_classes = (IsAuthenticated,)
     queryset = Exercises.objects.all()
     serializer_class = ExercisesSerializer

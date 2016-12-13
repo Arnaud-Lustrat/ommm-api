@@ -7,7 +7,7 @@ from ommm.serializers import TagsSerializer
 
 
 class TagsList(mixins.ListModelMixin, mixins.CreateModelMixin, generics.GenericAPIView):
-    #permission_classes = (IsAuthenticated,)
+    # permission_classes = (IsAuthenticated,)
     queryset = Tags.objects.all()
     serializer_class = TagsSerializer
 
@@ -18,10 +18,8 @@ class TagsList(mixins.ListModelMixin, mixins.CreateModelMixin, generics.GenericA
         return self.create(request, *args, **kwargs)
 
 
-class TagsDetail(mixins.RetrieveModelMixin,
-                    mixins.UpdateModelMixin,
-                    mixins.DestroyModelMixin,
-                    generics.GenericAPIView):
+class TagsDetail(mixins.RetrieveModelMixin, mixins.UpdateModelMixin,
+                    mixins.DestroyModelMixin, generics.GenericAPIView):
     # permission_classes = (IsAuthenticated,)
     queryset = Tags.objects.all()
     serializer_class = TagsSerializer

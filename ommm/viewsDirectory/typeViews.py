@@ -7,7 +7,7 @@ from ommm.serializers import TypesSerializer
 
 
 class TypesList(mixins.ListModelMixin, mixins.CreateModelMixin, generics.GenericAPIView):
-    #permission_classes = (IsAuthenticated,)
+    # permission_classes = (IsAuthenticated,)
     queryset = Types.objects.all()
     serializer_class = TypesSerializer
 
@@ -18,11 +18,9 @@ class TypesList(mixins.ListModelMixin, mixins.CreateModelMixin, generics.Generic
         return self.create(request, *args, **kwargs)
 
 
-class TypesDetail(mixins.RetrieveModelMixin,
-                    mixins.UpdateModelMixin,
-                    mixins.DestroyModelMixin,
-                    generics.GenericAPIView):
-    #permission_classes = (IsAuthenticated,)
+class TypesDetail(mixins.RetrieveModelMixin, mixins.UpdateModelMixin,
+                    mixins.DestroyModelMixin, generics.GenericAPIView):
+    # permission_classes = (IsAuthenticated,)
     queryset = Types.objects.all()
     serializer_class = TypesSerializer
 
