@@ -9,8 +9,6 @@ class FavsSerializer(serializers.ModelSerializer):
         fields = (
             'id',
             'users',
+            'exercise',
             'fav',
-            'date',
-            'heartbeat',
-            'feeling'
         )
