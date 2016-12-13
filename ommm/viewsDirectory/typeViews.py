@@ -7,7 +7,7 @@ from ommm.serializers import TypesSerializer
 
 
 class TypesList(mixins.ListModelMixin, mixins.CreateModelMixin, generics.GenericAPIView):
-    permission_classes = (IsAuthenticated,)
+    #permission_classes = (IsAuthenticated,)
     queryset = Types.objects.all()
     serializer_class = TypesSerializer
 

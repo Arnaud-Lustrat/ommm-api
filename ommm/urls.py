@@ -8,7 +8,7 @@ urlpatterns = [
     # Authentification
     url(r'^signup/', views.SignUp.as_view()),
     url(r'^signin/', obtain_jwt_token),
-    url(r'^restricted/', views.Home.as_view()),
+    #url(r'^restricted/', views.Home.as_view()),
 
     # Types
     url(r'^types/$', views.TypesList.as_view()),
