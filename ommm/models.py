@@ -44,12 +44,13 @@ class Exercises(models.Model):
     updated_at = models.DateTimeField(default=timezone.now())
     type = models.ForeignKey(Types, null=True, related_name='type_exercises')
     tag = models.ForeignKey(Tags, null=True, related_name='tag_exercises')
+    exercise_favs = models.ManyToManyField(ValidatedUser, null=True, related_name='user_favs')
 
 
-class Favs(models.Model):
-    users = models.ForeignKey(ValidatedUser, on_delete=models.CASCADE)
-    exercise = models.ForeignKey(Exercises, on_delete=models.CASCADE)
-    fav = models.IntegerField(null=True)
+# class Favs(models.Model):
+#    users = models.ForeignKey(ValidatedUser, related_name='user_favs', on_delete=models.CASCADE)
+#    exercise = models.ForeignKey(Exercises, related_name='exercice_favs', on_delete=models.CASCADE)
+#    fav = models.IntegerField(null=True)
 
 
 class Sessions(models.Model):
