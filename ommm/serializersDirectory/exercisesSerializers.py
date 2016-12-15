@@ -18,7 +18,9 @@ class ExercisesSerializer(serializers.ModelSerializer):
             'created_at',
             'updated_at',
             'type',
-            'tag'
+            'tag',
+            'thumbnail',
+            'title'
         )
 
 
@@ -34,5 +36,7 @@ class ExercicesWithoutTypeSerializer(serializers.ModelSerializer):
             'total_fav',
             'created_at',
             'updated_at',
-            'tag'
+            'tag',
+            'thumbnail',
+            'title'
         )

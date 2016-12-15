@@ -42,15 +42,11 @@ class Exercises(models.Model):
     total_fav = models.BigIntegerField(default=0)
     created_at = models.DateTimeField(default=timezone.now(), editable=False)
     updated_at = models.DateTimeField(default=timezone.now())
+    thumbnail = models.CharField(blank=True, null=True, max_length=255)
+    title = models.CharField(blank=True, null=True, max_length=128)
     type = models.ForeignKey(Types, null=True, related_name='type_exercises')
     tag = models.ForeignKey(Tags, null=True, related_name='tag_exercises')
     exercise_favs = models.ManyToManyField(ValidatedUser, null=True, related_name='user_favs')
-
-
-# class Favs(models.Model):
-#    users = models.ForeignKey(ValidatedUser, related_name='user_favs', on_delete=models.CASCADE)
-#    exercise = models.ForeignKey(Exercises, related_name='exercice_favs', on_delete=models.CASCADE)
-#    fav = models.IntegerField(null=True)
 
 
 class Sessions(models.Model):

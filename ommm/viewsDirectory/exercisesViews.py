@@ -91,13 +91,4 @@ def rewrite_data(validated_data):
             tag_index = list_tag_id.index(tag_id)
             list_tag[tag_index]['exercises'].append(exo)
 
-        # if tag in list_tag:
-        #     tag_index = list_tag.index(tag)
-        #     list_tag[tag_index]['exercises'].append(exo)
-        # else:
-        #     tag.update({'exercises': []})
-        #     list_tag.append(tag)
-        #     tag_index = list_tag.index(tag)
-        #     list_tag[tag_index]['exercises'].append(exo)
-
     return list_tag
